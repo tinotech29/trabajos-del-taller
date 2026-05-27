@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+    <style>
+        .oculto{
+            display:none;
+            
+        }
+         button {
+            background-color: blueviolet;
+            color: rgb(206, 206, 206);
+            font-size: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+    
+
+
+    </style>
+    
+</head>
+<body>
+    <h1> Javascrip (JS)</h1>
+    <p id="texto">Colooon campeoon</p>
+    <button id="btn_boton">ocultar</button>
+
+    <script>
+        const texto=document.getElementById("texto");
+        const boton=document.getElementById("btn_boton");
+        boton.addEventListener("click",function(){
+            texto.classList.toggle("oculto")
+            if (texto.classList.contains("oculto")) {
+                this.textContent = "mostrar texto"; 
+            } else{
+                this.textContent = "ocultar texto"
+            }
+
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>

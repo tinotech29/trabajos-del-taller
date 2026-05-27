@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript1</title>
+    <style>
+        button {
+            background-color: blueviolet;
+            color: rgb(206, 206, 206);
+            font-size: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>javascript</h1>
+    <p id="Texto"></p>
+    <button id="boton">hacer clic aqui</button>
+    <button id="btn_limpiar">limpiar</button>
+
+    <script>
+        const boton = document.getElementById("boton");
+        const texto = document.getElementById("Texto");
+        const botonlimpiar = document.getElementById("btn_limpiar");
+
+        // CORRECCIÓN: Se cambió "addeventlistener" por "addEventListener"
+        boton.addEventListener("click", function() {
+            texto.textContent = "Has presionado el botón correctamente";
+            alert("Hola, este mensaje tiene una alerta");
+        });
+        
+        // CORRECCIÓN: Se cambió "addeventlistener" por "addEventListener"
+        botonlimpiar.addEventListener("click", function() {
+            texto.textContent = "";
+        });
+    </script>
+    
+</body>
+</html>
