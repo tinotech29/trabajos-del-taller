@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .padre{
+            widht: 200px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            border:2px solid black;
+
+        }
+        .con-hidden{
+            overflow: hidden;
+        }
+        .hijo{
+            width:25px;
+            height:10px;
+            
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h3>con overflow: hidden</h3>
+    <div class="padre con-hidden">
+        <p>no me salgo del borde</p>
+        <img src="dibu.jpg" alt="100">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .fila1{
+            display:flex;
+            justify-content:flex-end;   
+        }
+        .fila2{
+            display:flex;
+            justify-content:center;
+        }
+        .fila3{
+            display: flex;
+            background-color:blue ;
+        }
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height: 100vh;
+            
+        }
+        .caja1{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .caja2{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            display: flex;
+            justify-content:center;
+        }
+        .caja3{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            display: flex;
+            justify-content: flex-star;
+            align-items: flex-end;
+        }
+
+        .cajagrande{
+            width: 450px;
+            height: 450px;
+            background-color: blue;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        P{
+            font-size: 25px;
+        }
+        
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="cajagrande">
+    <div class="fila1">
+        <div class="caja1">
+            <p>HTML</p>
+
+
+
+        </div>
+    </div>
+       <div class="fila2">
+        <div class="caja2">
+            <p>CSS</p>
+        </div>
+    </div>
+    <div class="fila3">
+        <div class="caja3">
+            <p>FlexBox</p>
+
+        </div>
+
+    </div>
+ </div>
+
+</body>
+</html>

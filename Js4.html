@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+    <style>
+        .Button{
+            width:400px;
+            height:400px;
+            border: 2px,solid;
+            background-color: red;
+            font-size: 20px;
+            text-align: justify;
+        }
+        nav{
+            display:flex;
+            justify-content: flex-end;
+        }
+
+        button{
+            margin: 5px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: aqua;
+            color: grey;
+        }
+
+        table{
+            display:flex;
+            justify-content: center;
+        }
+        img{
+            margin:20px;
+        }
+        #git, #github{
+            display: none;
+        }
+    </style>
+<body>
+    <header>
+        <nav>
+            <button id="btn_inicio">inicio</button>
+            <button id="btn_git">git</button>
+            <button id="btn_github">github</button>
+        </nav>
+    </header>
+    <section id="inicio">
+        <table>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9yl6D6OEj6ZkGJCqi3RaRnROvZw8J5R0mg&s" alt=""></td>
+            </tr>
+        </table>
+        
+    </section>
+    <section id="git">
+        <h1>git</h1>
+        <p>Git es un sistema de control de versiones distribuido. En términos sencillos, es un programa que registra todos los cambios realizados en el código de un proyecto a lo largo del tiempo, permitiendo recuperar versiones anteriores, comparar estados y colaborar con otras personas de forma segura y ordenada</p>
+        <h2><strong>¿para que sirve?</strong></h2>
+        <ul>
+            <li><strong>Historial de cambios:</strong> Funciona como una "máquina del tiempo". Si modificas algo y el proyecto deja de funcionar, puedes volver fácilmente a una versión anterior estable.</li>
+            <li><strong>Trabajo colaborativo:</strong>Permite que varios programadores trabajen en el mismo archivo al mismo tiempo sin sobrescribir el trabajo de los demás.</li>
+            <li><strong>Ramas (Branches):</strong>Permite crear "copias aisladas" del código para experimentar, añadir nuevas funciones o corregir errores sin alterar la versión principal</li>
+        </ul>
+     </section>  
+     <section id="github">
+        <h1>github</h1>
+        <p>GitHub es una plataforma en la nube y red social para desarrolladores donde se almacena y comparte código fuente. Funciona como un portafolio digital y una herramienta colaborativa que permite gestionar versiones de proyectos de software, realizar copias de seguridad y trabajar en equipo de forma remota.</p>
+     </section>
+
+
+     <script>
+        /* captura de los botones */
+        const boton_inicio=document.getElementById("btn_inicio");
+        const boton_git=document.getElementById("btn_git");
+        const boton_github=document.getElementById("btn_github");
+
+        /* captura de las secciones */
+        const contenido_git= document.getElementById("git");
+        const contenido_github=document.getElementById("github");
+        const contenido_inicio=document.getElementById("inicio");
+
+        /* escuchar los botones */
+        boton_inicio.addEventListener("click",function(){
+            contenido_inicio.style.display="block";
+            contenido_git.style.display="none";
+            contenido_github.style.display="none";
+        })
+        boton_git.addEventListener("click",function(){
+            contenido_inicio.style.display="none";
+            contenido_git.style.display="block";
+            contenido_github.style.display="none";
+        })
+        boton_github.addEventListener("click",function(){
+            contenido_inicio.style.display="none";
+            contenido_git.style.display="none";
+            contenido_github.style.display="block";
+        })
+
+
+
+
+     </script>
+
+
+
+
+
+
+</body>
+</html>
