@@ -3,118 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-</head>
+    <title>Document</title>
     <style>
-        .Button{
-            width:400px;
-            height:400px;
-            border: 2px,solid;
+        .Button {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black; /* Corregida la coma */
             background-color: red;
             font-size: 20px;
             text-align: justify;
         }
-        nav{
-            display:flex;
+
+        nav {
+            display: flex;
             justify-content: flex-end;
         }
 
-        button{
+        button {
             margin: 5px;
             cursor: pointer;
             background-color: black;
             color: white;
             border-radius: 10px;
             font-size: 20px;
+            padding: 5px 10px; /* Un poco de espacio interno para que no quede pegado el texto */
         }
-        button:hover{
+
+        button:hover {
             background-color: aqua;
             color: grey;
         }
 
-        table{
-            display:flex;
-            justify-content: center;
+        table {
+            margin: 0 auto; /* Forma correcta y segura de centrar una tabla */
         }
-        img{
-            margin:20px;
+
+        img {
+            margin: 20px;
         }
-        #git, #github{
+
+        #git, #github {
             display: none;
         }
+
+        /* Cambiado 'tabla' por 'table' y borrada la línea 'border' que estaba rota */
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse; /* Hace que los bordes dobles se unan en uno solo */
+            padding: 8px; /* Espacio para que el texto de la tabla no toque los bordes */
+            margin:0 auto; /* aplica un margen superior 0 y el "auto" reparte los mismos espacios en el margen izquierdo y derecho  */
+        }
+        table td:first-child{
+            background-color: aqua;
+        }
     </style>
+</head>
 <body>
     <header>
         <nav>
-            <button id="btn_inicio">inicio</button>
-            <button id="btn_git">git</button>
-            <button id="btn_github">github</button>
+            <button id="btn_inicio">Inicio</button>
+            <button id="btn_git">Git</button>
+            <button id="btn_github">GitHub</button>
         </nav>
     </header>
+
     <section id="inicio">
         <table>
             <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9yl6D6OEj6ZkGJCqi3RaRnROvZw8J5R0mg&s" alt=""></td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9yl6D6OEj6ZkGJCqi3RaRnROvZw8J5R0mg&s" alt="Logo"></td>
             </tr>
         </table>
-        
     </section>
+
     <section id="git">
-        <h1><u>git</u></h1>
-        <p>Git es un sistema de control de versiones distribuido. En términos sencillos, es un programa que registra todos los cambios realizados en el código de un proyecto a lo largo del tiempo, permitiendo recuperar versiones anteriores, comparar estados y colaborar con otras personas de forma segura y ordenada</p>
-        <h2><strong>¿para que sirve?</strong></h2>
+        <h1><u>Git</u></h1>
+        <p>Git es un sistema de control de versiones distribuido. En términos sencillos, es un programa que registra todos los cambios realizados en el código de un proyecto a lo largo del tiempo, permitiendo recuperar versiones anteriores, comparar estados y colaborar con otras personas de forma segura y ordenada.</p>
+        <h2><strong>¿Para qué sirve?</strong></h2>
         <ul>
             <li><strong>Historial de cambios:</strong> Funciona como una "máquina del tiempo". Si modificas algo y el proyecto deja de funcionar, puedes volver fácilmente a una versión anterior estable.</li>
-            <li><strong>Trabajo colaborativo:</strong>Permite que varios programadores trabajen en el mismo archivo al mismo tiempo sin sobrescribir el trabajo de los demás.</li>
-            <li><strong>Ramas (Branches):</strong>Permite crear "copias aisladas" del código para experimentar, añadir nuevas funciones o corregir errores sin alterar la versión principal</li>
+            <li><strong>Trabajo colaborativo:</strong> Permite que varios programadores trabajen en el mismo archivo al mismo tiempo sin sobrescribir el trabajo de los demás.</li>
+            <li><strong>Ramas (Branches):</strong> Permite crear "copias aisladas" del código para experimentar, añadir nuevas funciones o corregir errores sin alterar la versión principal.</li>
         </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>comando</th>
+                    <th>descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                <td><strong>git init</strong></td>
+                <td>Inicia el repositorio, creando una carpeta ".git", que estará oculta. esto se hace una sola vez</td>
+            </tr>
+            <tr>
+                <td><strong>git config user.name</strong><br>
+                git config user.name "santino"</td>
+                <td>es para visualizar que nombre de usuario esta actualmente.<br>
+                registra el nuevo nombre</td>
+            </tr>
+            <tr>
+                <td><strong>git config user.email</strong><br>
+                git config user.email "hussantino29@gmail.com</td>
+                <td>es para visualizar el email que esta actualmente<br>configura el nuevo email</td>
+            </tr>
+        </table>
+            </tbody>
+           
      </section>  
+
      <section id="github">
-        <h1><u>github</u></h1>
+        <h1><u>GitHub</u></h1>
         <p>GitHub es una plataforma en la nube y red social para desarrolladores donde se almacena y comparte código fuente. Funciona como un portafolio digital y una herramienta colaborativa que permite gestionar versiones de proyectos de software, realizar copias de seguridad y trabajar en equipo de forma remota.</p>
         <ul>
-            <li><strong>Control de versiones con Git: </strong>GitHub utiliza el sistema Git. Esto significa que funciona como una "máquina del tiempo" para tus archivos: registra cada modificación realizada, permitiendo volver a versiones anteriores, comparar cambios y crear diferentes ramas de desarrollo para probar nuevas ideas sin dañar el proyecto original</li>
+            <li><strong>Control de versiones con Git:</strong> GitHub utiliza el sistema Git. Esto significa que funciona como una "máquina del tiempo" para tus archivos: registra cada modificación realizada, permitiendo volver a versiones anteriores, comparar cambios y crear diferentes ramas de desarrollo para probar nuevas ideas sin dañar el proyecto original.</li>
         </ul>
      </section>
 
-
      <script>
-        /* captura de los botones */
-        const boton_inicio=document.getElementById("btn_inicio");
-        const boton_git=document.getElementById("btn_git");
-        const boton_github=document.getElementById("btn_github");
+        /* Captura de los botones */
+        const boton_inicio = document.getElementById("btn_inicio");
+        const boton_git = document.getElementById("btn_git");
+        const boton_github = document.getElementById("btn_github");
 
-        /* captura de las secciones */
-        const contenido_git= document.getElementById("git");
-        const contenido_github=document.getElementById("github");
-        const contenido_inicio=document.getElementById("inicio");
+        /* Captura de las secciones */
+        const contenido_git = document.getElementById("git");
+        const contenido_github = document.getElementById("github");
+        const contenido_inicio = document.getElementById("inicio");
 
-        /* escuchar los botones */
-        boton_inicio.addEventListener("click",function(){
-            contenido_inicio.style.display="block";
-            contenido_git.style.display="none";
-            contenido_github.style.display="none";
-        })
-        boton_git.addEventListener("click",function(){
-            contenido_inicio.style.display="none";
-            contenido_git.style.display="block";
-            contenido_github.style.display="none";
-        })
-        boton_github.addEventListener("click",function(){
-            contenido_inicio.style.display="none";
-            contenido_git.style.display="none";
-            contenido_github.style.display="block";
-        })
+        /* Escuchar los botones */
+        boton_inicio.addEventListener("click", function() {
+            contenido_inicio.style.display = "block";
+            contenido_git.style.display = "none";
+            contenido_github.style.display = "none";
+        });
 
+        boton_git.addEventListener("click", function() {
+            contenido_inicio.style.display = "none";
+            contenido_git.style.display = "block";
+            contenido_github.style.display = "none";
+        });
 
-
-
+        boton_github.addEventListener("click", function() {
+            contenido_inicio.style.display = "none";
+            contenido_git.style.display = "none";
+            contenido_github.style.display = "block";
+        });
      </script>
-
-
-
-
-
-
 </body>
 </html>
